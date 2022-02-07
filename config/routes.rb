@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "home#index"
 
+  get "forgot-password", to: "forgotpassword#new"
+  post "forgot-password", to: "forgotpassword#create"
+  get "forgot-password-reset", to: "forgotpassword#edit"
+  patch "forgot-password-reset", to: "forgotpassword#update"
+
   get "password-reset", to: "passwords#edit"
   patch "password-reset", to: "passwords#update"
 
